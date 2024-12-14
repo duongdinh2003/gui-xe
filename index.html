@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý Xe</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Quản Lý Xe</h1>
+      <div class="export-container">
+        <button id="exportExcel">Xuất Excel</button>
+      </div>
+
+      <form id="vehicleForm">
+        <label for="licensePlate">Biển số xe:</label>
+        <input type="text" id="licensePlate" required />
+
+        <label for="vehicleId">Mã số gửi xe:</label>
+        <input type="text" id="vehicleId" required />
+
+        <label for="time">Thời gian lấy xe:</label>
+        <input type="datetime-local" id="time" required />
+
+        <button type="submit">Lưu Thông Tin</button>
+      </form>
+
+      <h2>Thông tin xe đã lưu:</h2>
+      <div id="vehicleData"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
